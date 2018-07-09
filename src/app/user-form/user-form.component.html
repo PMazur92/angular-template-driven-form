@@ -1,0 +1,54 @@
+<div class="form-container container border border-light rounded clearfix">
+  <h1>User Form</h1>
+  <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="input-control" id="name" title="tooltip"
+        required 
+        [(ngModel)]="user.name" name="name" 
+        #name="ngModel">
+      <small [style.visibility]="(name.valid || name.pristine)?'hidden':'visible'" id="nameHelp" class="form-text">
+        Name is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="surname">Surname</label>
+      <input type="text" class="input-control" id="surname" 
+        required 
+        [(ngModel)]="user.surname" name="surname"
+        #surname="ngModel">
+      <small [style.visibility]="(surname.valid || surname.pristine)?'hidden':'visible'" id="surnameHelp" class="form-text">
+        Surname is required
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="text" class="input-control" id="email" 
+        required 
+        [(ngModel)]="user.email" name="email"
+        #email="ngModel">
+        <small [style.visibility]="(email.valid || email.pristine)?'hidden':'visible'" id="emailHelp" class="form-text">
+          Email is required
+        </small>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <input type="text" class="input-control" id="message" 
+        required 
+        [(ngModel)]="user.message" name="message"
+        #message="ngModel">
+        <small [style.visibility]="(message.valid || message.pristine)?'hidden':'visible'" id="messageHelp" class="form-text">
+          Message is required
+        </small>
+    </div>
+
+    <button type="submit" class="btn btn-outline-light"
+      [disabled]="!userForm.form.valid">
+      Send
+    </button>
+
+  </form>
+</div>

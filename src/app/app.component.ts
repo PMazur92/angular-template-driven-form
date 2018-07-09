@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { User } from './shared/classes/user';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  
+  title = 'Template-driven User Form';
+  gotMessage: boolean = false;
+  user: User;
+
+  get diagnostic() {
+    return JSON.stringify(this.user);
+  }
+
+  messageSent(event: User) {
+    console.log("event", event);
+    this.gotMessage = true;
+    this.user = event;
+    console.log(this.user.name);
+  }
 }

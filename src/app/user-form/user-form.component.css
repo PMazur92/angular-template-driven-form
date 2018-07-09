@@ -1,0 +1,52 @@
+.form-container {
+    font-family: Quicksand;
+    padding: 10px 10px;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+}
+
+.form-container h1 {
+    text-align: right;
+}
+
+.form-container label {
+    float: right;
+}
+
+button[type="submit"] {
+    margin: 10px;
+    float: right;
+}
+
+.ng-valid[required]:focus, .ng-valid.ng-valid.required:focus {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.ng-invalid:not(form):focus {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.ng-valid[required], .ng-valid.required {
+    border-bottom: 2px solid rgb(200, 250, 75);
+}
+
+.ng-invalid:not(form) {
+    border-bottom: 2px solid rgb(250, 75, 75);
+}
+
+input {
+    text-align: right;
+}
+
+.input-control {
+    width: 100%;
+    border: none;
+    transition: 1s;
+    color: antiquewhite;
+}
+
+input:focus {
+    background: transparent;
+    color: antiquewhite;
+    outline: none;
+}
