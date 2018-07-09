@@ -12,14 +12,8 @@ export class AppComponent {
   gotMessage: boolean = false;
   user: User;
 
-  get diagnostic() {
-    return JSON.stringify(this.user);
-  }
-
   messageSent(event: User) {
-    console.log("event", event);
     this.gotMessage = true;
     this.user = event;
-    console.log(this.user.name);
   }
 }

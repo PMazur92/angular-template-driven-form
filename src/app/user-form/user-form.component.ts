@@ -23,7 +23,6 @@ export class UserFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log("submit", this.user);
     this.usernameEmit.emit(this.user);
   }
 
