@@ -27,6 +27,7 @@
       <label for="email">E-mail</label>
       <input type="text" class="input-control" id="email" 
         required 
+        email
         [(ngModel)]="user.email" name="email"
         #email="ngModel">
         <small [style.visibility]="(email.valid || email.pristine)?'hidden':'visible'" id="emailHelp" class="form-text">

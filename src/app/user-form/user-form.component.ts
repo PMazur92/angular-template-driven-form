@@ -18,10 +18,6 @@ export class UserFormComponent implements OnInit {
     this.user = new User();
   }
 
-  get diagnostic() {
-    return JSON.stringify(this.user);
-  }
-
   onSubmit() {
     this.usernameEmit.emit(this.user);
   }
